@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../stye/diesel.css" />
+  </head>
+  <body>
+    <h1>DIESEL</h1>
+<nav>
+    <label for="date">Starting date:</label>
+    <input type="date" id="date" class="dt" onchange="formatDate()" />
+    <label for="date" class="lb">Next Calibration date :</label>
+    <input type="date" id="date1" class="dt" onchange="formatDate1()" />
+    <button type="submit" id="printpdf" onclick="print()">DOWNLOAD</button>
+</nav>
+   
+
+    <p id="Starting">
+      <b
+        ><i><span id="formattedDate"></span></i
+      ></b>
+    </p>
+    <p id="Starting1">
+      <b><span id="formattedDate1"></span></b>
+    </p>
+    <div class="img">
+      <img src="../svg/DIESEL.svg" alt="PETROL" id="photo" />
+    </div>
+
+    <script src="../app.js"></script>
+     <footer>
+      <div class="footer">
+        <p>Developed by Sapariya Darshit</p>
+        <p>Contact: <a href="https://wa.me/918347402205"> Click Me  </a>
+    </footer>
+  </body>
+</html>

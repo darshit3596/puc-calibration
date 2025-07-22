@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+nav{
+    background-color: rgb(14, 164, 187);
+    padding: 10px;
+    border: 1px solid rgb(16, 47, 113);
+    height: 60px;
+}
+h1{
+    text-align: center;
+    background-color: rgb(5, 115, 152);
+}
+#Starting{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 330px;
+    left: 584px; 
+    z-index: 1;
+    
+}
+#Starting1{
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    top: 840px;
+    left: 282px
+}
+input[type=date]{
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+.non{
+    display: none;
+}
+label{
+    margin: 15px;
+    color: white;
+    font-size: 20px;
+}
+#printpdf{
+     padding: 10px;
+    background-color: rgb(38, 192, 48);
+    border-radius: 7px;
+    border: 1px solid rgba(185, 109, 109, 0);
+    cursor: pointer;
+    margin-left: 710px; 
+    height: 65px;
+    position: relative;
+    top: -30px;
+}
+#printpdf:hover{
+    background-color: #f65f1a;
+    color: white;
+}
+.footer{
+    position: fixed;
+    bottom: 1px;
+    background-color: rgba(86, 225, 238, 0.307);
+    width: 100%;
+    text-align: center;
+}
+
+
+@media print {
+    *{
+        margin-left: 10px;
+        zoom: 1.05;
+    }
+    h1{
+        display: none;
+    }
+   #date{
+    display: none;
+   }
+   #date1{
+    display: none;
+   }
+   #printpdf{
+    display: none;
+   }
+   label{
+    display: none;
+   }
+   #Starting1{
+    top: 883px;  
+   }
+   #Starting{
+    top: 350px;   
+    left: 588px; 
+}
+    nav{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    nav{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: -10px;
+        padding: 9px;
+    }
+    #printpdf{
+            position: relative;
+        top: 4px;
+        right: 564px;
+        height: 42px;
+        width: 163px;
+
+    }
+    img{
+        height: 300px;
+        width: auto;
+        position: absolute;
+        left: 70px;
+        border: 2px solid black;
+        padding: 5px;
+        margin: 10px;
+        
+    }
+  }
+
+
+

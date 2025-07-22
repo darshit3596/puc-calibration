@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: azure;
+    
+}
+.h1{
+    background-color: rgb(14, 164, 187);
+    height: 35px;
+    width: 100%; 
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+    position: relative;
+    top: 34vh;
+    flex-direction: row;
+    
+}
+.petrol{
+    
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+   align-content: center;
+   text-align: center;
+   cursor: pointer;
+   background-color: rgb(51, 9, 180);
+   font-size:xx-large;
+}
+.diesel{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+   align-content: center;
+   text-align: center;
+   cursor: pointer;
+   background-color: rgb(51, 9, 180);
+   font-size:xx-large;
+}
+
+.footer{
+    position: fixed;
+    bottom: 1px;
+    background-color: rgba(86, 225, 238, 0.307);
+    width: 100%;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+         
+    }
+    .petrol{ 
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    }
+    .diesel{ 
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    }
+
+  }
