@@ -3,31 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puc</title>
+    <title>PUC Calibration & AMC - Shreeji</title>
+    <!-- Google Fonts for modern utility typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="h1">PUC CALIBRATION SHREEJI</div>
+    <!-- 1. HEADER -->
+    <header class="app-header">
+      <div class="header-container">
+        <div class="header-icon" aria-hidden="true">
+          <!-- Shield / Certification Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <h1 class="h1">PUC CALIBRATION SHREEJI</h1>
+      </div>
     </header>
-    <main>
-      <div class="main">
-        <div class="petrol" onclick="petrol()">Petrol</div>
-        <div class="diesel" onclick="diesel()">Diesel</div>
+
+    <!-- 2. MAIN CONTENT -->
+    <main class="app-main">
+      <div class="content-wrapper">
+        <!-- CATEGORY TABS -->
+        <div class="tabs-nav" role="tablist">
+          <button
+            class="tab-btn active"
+            id="tabPuc"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panelPuc"
+            onclick="switchTab('puc')"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            PUC Calibration
+          </button>
+          <button
+            class="tab-btn"
+            id="tabAmc"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panelAmc"
+            onclick="switchTab('amc')"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            AMC Documents
+          </button>
+        </div>
+
+        <!-- 3. PUC CALIBRATION TAB PANEL -->
+        <div id="panelPuc" class="tab-panel active" role="tabpanel" aria-labelledby="tabPuc">
+          <div class="section-intro">
+            <h2 class="section-title">Select PUC Calibration Fuel</h2>
+            <p class="section-subtitle">Generate official calibration certificates for vehicle testing equipment.</p>
+          </div>
+
+          <div class="main">
+            <!-- PETROL OPTION -->
+            <div
+              class="card petrol"
+              onclick="petrol()"
+              role="button"
+              tabindex="0"
+              aria-label="Select Petrol Calibration"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); petrol(); }"
+            >
+              <div class="icon-wrapper" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 22h12"/>
+                  <path d="M4 22V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v18"/>
+                  <path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/>
+                  <path d="M7 6h4"/>
+                  <path d="M7 9h4"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Petrol</h3>
+                <p class="card-desc">Gasoline vehicle calibration</p>
+              </div>
+              <span class="card-action">
+                Select Petrol
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <div class="card-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- DIESEL OPTION -->
+            <div
+              class="card diesel"
+              onclick="diesel()"
+              role="button"
+              tabindex="0"
+              aria-label="Select Diesel Calibration"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); diesel(); }"
+            >
+              <div class="icon-wrapper" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 22h12"/>
+                  <path d="M4 22V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v18"/>
+                  <path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/>
+                  <path d="M6 7h6"/>
+                  <circle cx="9" cy="11" r="1.5"/>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Diesel</h3>
+                <p class="card-desc">Smoke & diesel calibration</p>
+              </div>
+              <span class="card-action">
+                Select Diesel
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <div class="card-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. AMC CONTRACT TAB PANEL -->
+        <div id="panelAmc" class="tab-panel" role="tabpanel" aria-labelledby="tabAmc">
+          <div class="section-intro">
+            <h2 class="section-title">Select AMC Certificate</h2>
+            <p class="section-subtitle">Generate Annual Maintenance Contract certificates for test machines.</p>
+          </div>
+
+          <div class="main">
+            <!-- PETROL AMC OPTION -->
+            <div
+              class="card petrol-amc"
+              onclick="petrolAmc()"
+              role="button"
+              tabindex="0"
+              aria-label="Select Petrol AMC"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); petrolAmc(); }"
+            >
+              <div class="icon-wrapper" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <path d="M8 13h8"></path>
+                  <path d="M8 17h8"></path>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Petrol AMC</h3>
+                <p class="card-desc">Gas Analyser Model AVG-500</p>
+              </div>
+              <span class="card-action">
+                Select Petrol AMC
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <div class="card-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- DIESEL AMC OPTION -->
+            <div
+              class="card diesel-amc"
+              onclick="dieselAmc()"
+              role="button"
+              tabindex="0"
+              aria-label="Select Diesel AMC"
+              onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); dieselAmc(); }"
+            >
+              <div class="icon-wrapper" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <circle cx="12" cy="14" r="2.5"></circle>
+                </svg>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Diesel AMC</h3>
+                <p class="card-desc">Smoke Meter Model AVS-100</p>
+              </div>
+              <span class="card-action">
+                Select Diesel AMC
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <div class="card-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+
+    <!-- 5. FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="developer-text">Developed by Sapariya Darshit</p>
+        <p class="contact-wrapper">
+          <span>Contact:</span>
+          <a
+            href="https://wa.me/918347402205"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+            title="Chat on WhatsApp"
+          >
+            <!-- WhatsApp Icon -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Click Me
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 6. JAVASCRIPT -->
+    <script src="app.js"></script>
     <script>
-      let petrol = ()=>{
-        location.replace("page/petrol.html");
-      }
-      let diesel = ()=>{
-        location.replace("page/diesel.html");
+      function switchTab(tab) {
+        const tabPuc = document.getElementById("tabPuc");
+        const tabAmc = document.getElementById("tabAmc");
+        const panelPuc = document.getElementById("panelPuc");
+        const panelAmc = document.getElementById("panelAmc");
+
+        if (tab === "puc") {
+          tabPuc.classList.add("active");
+          tabPuc.setAttribute("aria-selected", "true");
+          tabAmc.classList.remove("active");
+          tabAmc.setAttribute("aria-selected", "false");
+
+          panelPuc.classList.add("active");
+          panelAmc.classList.remove("active");
+        } else {
+          tabAmc.classList.add("active");
+          tabAmc.setAttribute("aria-selected", "true");
+          tabPuc.classList.remove("active");
+          tabPuc.setAttribute("aria-selected", "false");
+
+          panelAmc.classList.add("active");
+          panelPuc.classList.remove("active");
+        }
       }
     </script>
-    <footer>
-      <div class="footer">
-        <p>Developed by Sapariya Darshit</p>
-        <p>Contact: <a href="https://wa.me/918347402205"> Click Me  </a>
-    </footer>
   </body>
 </html>

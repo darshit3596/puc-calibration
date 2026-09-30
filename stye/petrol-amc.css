@@ -1,13 +1,13 @@
 /* ==========================================================================
-   PUC Calibration Shreeji - Diesel Calibration Stylesheet
+   PUC Calibration Shreeji - Petrol AMC Stylesheet
    ========================================================================== */
 
 :root {
   --primary-gradient: linear-gradient(135deg, #0e7490 0%, #0f766e 100%);
-  --diesel-color: #2563eb;
-  --diesel-hover: #1d4ed8;
-  --diesel-bg: #eff6ff;
-  --diesel-border: #bfdbfe;
+  --amc-color: #0d9488;
+  --amc-hover: #0f766e;
+  --amc-bg: #f0fdfa;
+  --amc-border: #99f6e4;
   
   --bg-page: #f1f5f9;
   --bg-card: #ffffff;
@@ -106,8 +106,8 @@ body {
   color: #ffffff;
 }
 
-.badge-diesel {
-  background-color: var(--diesel-color);
+.badge-amc {
+  background-color: #0284c7;
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -175,8 +175,8 @@ body {
 
 .input-group input[type="date"]:focus {
   background-color: #ffffff;
-  border-color: #0f766e;
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+  border-color: var(--amc-color);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
 }
 
 .btn-tool {
@@ -207,7 +207,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: var(--diesel-color);
+  background-color: var(--amc-color);
   color: #ffffff;
   font-size: 0.9rem;
   font-weight: 700;
@@ -216,14 +216,14 @@ body {
   border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.25);
   transition: var(--transition);
 }
 
 #printpdf:hover {
-  background-color: var(--diesel-hover);
+  background-color: var(--amc-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 12px -2px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 12px -2px rgba(13, 148, 136, 0.35);
 }
 
 #printpdf:active {
@@ -273,28 +273,41 @@ body {
   pointer-events: none;
 }
 
-/* Precise Date Coordinates for DIESEL Certificate */
+/* Precise Date Coordinates for PETROL AMC */
 #Starting {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 13px;
   font-weight: bold;
   font-style: italic;
   position: absolute;
-  top: 292px;
-  left: 583px;
+  top: 251px;
+  left: 614px;
   z-index: 10;
   white-space: nowrap;
   line-height: 1;
   color: #000000;
 }
 
-#Starting1 {
-  font-family: Arial, Helvetica, sans-serif;
+#StartingFrom {
+  font-family: "Bookman Old Style", Georgia, serif;
   font-size: 13px;
   font-weight: bold;
   position: absolute;
-  top: 825px;
-  left: 282px;
+  top: 340px;
+  left: 532px;
+  z-index: 10;
+  white-space: nowrap;
+  line-height: 1;
+  color: #000000;
+}
+
+#StartingTo {
+  font-family: "Bookman Old Style", Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  top: 355px;
+  left: 83px;
   z-index: 10;
   white-space: nowrap;
   line-height: 1;
