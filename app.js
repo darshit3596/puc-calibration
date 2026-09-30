@@ -224,24 +224,27 @@ function updateViewportScale() {
     const viewport = document.querySelector(".certificate-viewport");
     if (!sheet) return;
 
-    const availableWidth = window.innerWidth;
-    const padding = availableWidth < 640 ? 24 : 48;
-    const maxAvailable = availableWidth - padding;
+    const clientWidth = document.documentElement.clientWidth || window.innerWidth;
+    const padding = clientWidth < 640 ? 16 : 48;
+    const maxAvailable = clientWidth - padding;
 
     if (maxAvailable < 816) {
-        const scale = Math.max(0.35, maxAvailable / 816);
+        const scale = Math.max(0.25, maxAvailable / 816);
         sheet.style.transform = `scale(${scale})`;
         sheet.style.transformOrigin = "top center";
         
         if (viewport) {
-            viewport.style.width = `${Math.round(816 * scale)}px`;
-            viewport.style.height = `${Math.round(1056 * scale)}px`;
+            viewport.style.width = `${Math.floor(816 * scale)}px`;
+            viewport.style.height = `${Math.floor(1056 * scale)}px`;
+            viewport.style.maxWidth = "100%";
         }
     } else {
         sheet.style.transform = "none";
+        sheet.style.transformOrigin = "top center";
         if (viewport) {
             viewport.style.width = "816px";
             viewport.style.height = "1056px";
+            viewport.style.maxWidth = "100%";
         }
     }
 }

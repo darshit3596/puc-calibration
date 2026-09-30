@@ -1,7 +1,7 @@
-# PUC Calibration & AMC (Shreeji) - Project Memory & Architecture Guide
+# SHREEJI CALIBRATION & AMC MANAGER - Project Memory & Architecture Guide
 
 ## 📋 Overview
-**PUC Calibration Shreeji** is a web-based utility designed to generate, preview, format, calibrate, and print PUC (Pollution Under Control) calibration certificates and AMC (Annual Maintenance Contract) certificates for both Petrol and Diesel vehicle testing equipment.
+**SHREEJI CALIBRATION & AMC MANAGER** is a web-based utility designed to generate, preview, format, calibrate, and print PUC (Pollution Under Control) calibration certificates and AMC (Annual Maintenance Contract) certificates for both Petrol and Diesel vehicle testing equipment.
 
 ---
 
@@ -85,7 +85,6 @@ puc-calibration/
   - Hides navigation (`nav.controls-bar`), buttons (`#printpdf`), headers (`.app-header`), labels, raw inputs (`#date`, `#date1`), adjuster panel (`.position-adjuster`), and footer.
   - Retains the exact 816x1056 certificate container at `(0, 0)` with no margins (`@page { size: letter portrait; margin: 0; }`), ensuring crisp, authentic, distortion-free certificate export.
 
----
-
-## 👨‍💻 Developer
-Developed by **Sapariya Darshit** ([Contact on WhatsApp](https://wa.me/918347402205))
+## 👨‍💻 Developer & Compliance
+- **Compliance Note**: *Note: This document is generated and maintained using Shreeji Calibration & AMC Manager. Data is updated periodically as per the applicable calibration and AMC records.*
+- Developed by **Sapariya Darshit**
